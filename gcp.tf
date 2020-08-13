@@ -1,5 +1,5 @@
 provider "google" {
-  version     = "~> 3.30"
+  version = "~> 3.30"
 }
 
 
@@ -9,11 +9,9 @@ module "project-factory" {
 
   name                = "pf-test-1"
   random_project_id   = "true"
-  # org_id              = "622235425790" #"hashicorptest.com"
-  org_id              = var.org_id #"hashicorptest.com"
+  org_id              = var.org_id
   usage_bucket_name   = "pf-test-1-usage-report-bucket"
   usage_bucket_prefix = "pf/test/1/integration"
-  # billing_account     = "Sales"
   billing_account     = var.billing_account
   shared_vpc          = "shared_vpc_host_name"
 
